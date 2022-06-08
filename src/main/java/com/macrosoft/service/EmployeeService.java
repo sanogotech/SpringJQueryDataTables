@@ -1,8 +1,8 @@
-package com.example.service;
+package com.macrosoft.service;
 
 import java.util.List;
 
-import com.example.model.Employee;
+import com.macrosoft.model.Employee;
 
 public interface EmployeeService {
 	

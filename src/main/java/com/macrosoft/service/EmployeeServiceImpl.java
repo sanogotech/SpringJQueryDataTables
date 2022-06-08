@@ -1,12 +1,12 @@
-package com.example.service;
+package com.macrosoft.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.model.Employee;
-import com.example.repository.EmployeeRepository;
+import com.macrosoft.model.Employee;
+import com.macrosoft.repository.EmployeeRepository;
 
 @Service("employeeService")
 public class EmployeeServiceImpl implements EmployeeService {

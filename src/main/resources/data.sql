@@ -1,3 +1,6 @@
+
+
+
 INSERT INTO employee(name, last_name, email, phone, active) values ('Gustavo','Ponce','test@test.com','1234567890',true);
 INSERT INTO employee(name, last_name, email, phone, active) values ('Bob','Marley','one@love.com','6483748590',false);
 INSERT INTO employee(name, last_name, email, phone, active) values ('David','Gilmour','high@hopes.com','7648909831',true);
