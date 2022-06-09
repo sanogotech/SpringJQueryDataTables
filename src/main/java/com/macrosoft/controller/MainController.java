@@ -52,6 +52,18 @@ public class MainController {
 		mavIndex.addObject("mod", "HIDE_RECORDS");
 		return new ModelAndView("login"); 
 	}
+	
+	@RequestMapping(value = "/userHome")
+	public ModelAndView userHome() {
+	
+		return new ModelAndView("userHome"); 
+	}
+	
+	@RequestMapping(value = "/adminHome")
+	public ModelAndView adminHome() {
+	
+		return new ModelAndView("adminHome"); 
+	}
 
 	// Show Records butonuna bastiktan sonra Jquery bu metoda bir Get istegi yapacak ve daha sonra
 	// thymeleaf switch ile mod = view_record oldugu icin kayitlar goruntulenecektir.

@@ -50,7 +50,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		.antMatchers("/modify").access("hasRole('ROLE_ADMIN')")
 		.antMatchers("/update").access("hasRole('ROLE_ADMIN')")
 		.antMatchers("/delete").access("hasRole('ROLE_ADMIN')").and()
-				.formLogin().loginProcessingUrl("/login").loginPage("/login").defaultSuccessUrl("/")
+				.formLogin().loginProcessingUrl("/login").loginPage("/login")
+				//.defaultSuccessUrl("/")
+				.successHandler(successHandler())
 				.failureUrl("/login?error=true")
 				.usernameParameter("email").passwordParameter("password").and()
 				.logout()
@@ -61,6 +63,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		
         http.csrf().disable();
         http.headers().frameOptions().disable();
+	}
+	
+	@Bean
+	public LoginSuccessHandler successHandler() {
+	    return new LoginSuccessHandler();
 	}
 	
 	@Override
